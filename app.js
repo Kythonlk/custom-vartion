@@ -30,10 +30,8 @@ jQuery(document).ready(function($) {
         var selectedBrandId = $(this).val();
         fetchColors(selectedBrandId);
     });
-
-    // Event listener for opening the modal
+    
     $('#selectionModal').on('show.bs.modal', function() {
-        // Reset the color selector when the modal is opened
         $('#color').val('');
     });
 });
