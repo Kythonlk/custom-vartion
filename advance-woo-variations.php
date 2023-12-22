@@ -20,15 +20,14 @@ add_action('wp_enqueue_scripts', 'enqueue_custom_js');
 
 function get_custom_brands() {
     global $wpdb;
-    $table_name = 'brands'; // Replace with your custom brands table name
+    $table_name = 'brands';
     $brands = $wpdb->get_results("SELECT * FROM $table_name");
     return $brands;
 }
 
-// Function to retrieve colors based on the selected brand
 function get_colors_from_custom_database($brand_id) {
     global $wpdb;
-    $table_name = 'color_codes'; // Replace with your custom colors table name
+    $table_name = 'color_codes'; 
     $brand_id = intval($brand_id);
     $colors = $wpdb->get_results($wpdb->prepare("SELECT * FROM $table_name WHERE brand_id = %d", $brand_id));
     return $colors;
@@ -73,7 +72,6 @@ function add_custom_selectors() {
                     <select name="brand" id="brand" class="form-select">
                         <option value="">Select Brand</option>';
     
-    // Retrieve brands from your custom database table
     $brands = get_custom_brands();
 
     foreach ($brands as $brand) {
