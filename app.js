@@ -1,7 +1,6 @@
 console.log('working well');
 
 jQuery(document).ready(function($) {
-    // Function to fetch colors based on the selected brand using AJAX
     function fetchColors(selectedBrandId) {
         var $colorSelect = $('#color');
         $colorSelect.empty().append('<option value="">Loading...</option>');
@@ -9,7 +8,7 @@ jQuery(document).ready(function($) {
         if (selectedBrandId) {
             $.ajax({
                 type: 'GET',
-                url: '/wp-json/custom-api/v1/colors/' + selectedBrandId, // Adjust the URL to your custom API endpoint
+                url: '/wp-json/custom-api/v1/colors/' + selectedBrandId,
                 success: function(data) {
                     $colorSelect.empty().append('<option value="">Select Color</option>');
                     $.each(data, function(index, color) {
@@ -25,7 +24,6 @@ jQuery(document).ready(function($) {
         }
     }
 
-    // Event listener for brand selection change within the modal
     $('#brand').on('change', function() {
         var selectedBrandId = $(this).val();
         fetchColors(selectedBrandId);
