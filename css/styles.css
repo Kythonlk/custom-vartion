@@ -1,0 +1,130 @@
+#selectVariantBtn {
+  background-color: #26ce16 !important;
+  color: #fff !important;
+}
+
+#colorSelector {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.color-card {
+  padding: 20px;
+  margin: 5px;
+  border: 1px #dbcfcf solid;
+  border-radius: 5px;
+}
+
+.color-name {
+  color: #000;
+  font-weight: bold;
+}
+.color-image {
+  border-radius: 5px;
+  border: 2px #a19696 solid;
+}
+.color-code {
+  margin: 0px !important;
+  padding-block: 2px;
+}
+.stock_code-cod {
+  margin: 0px !important;
+  padding-block: 2px;
+}
+
+#colorSearch {
+  width: calc(100%);
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  width: 80%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80% !important;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.top-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+#brandSelector,
+#colorSearch {
+  flex: 1;
+  margin: 5px;
+}
+
+#colorSelector {
+  width: 100%;
+}
+
+#brandSelector {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  color: #333;
+}
+
+#brandSelector + .select-arrow {
+  position: absolute;
+  right: 15px;
+  top: calc(50% - 3px);
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  border-style: solid;
+  border-width: 6px 6px 0 6px;
+  border-color: #333 transparent transparent transparent;
+}
+
+#brandSelector:hover {
+  background-color: #f9f9f9;
+}
+
+#brandSelector:focus {
+  border-color: #aaa;
+  outline: none;
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+}
+
